@@ -60,7 +60,7 @@ header img{
 body{
     display: grid;
     grid-template-rows: 15vh 100vh 120vh 15vh;
-    margin: 0;
+    overflow-x: hidden;
 }
 
 .sidebar{
