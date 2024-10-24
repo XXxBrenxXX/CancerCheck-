@@ -61,6 +61,8 @@ body{
     display: grid;
     grid-template-rows: 15vh 100vh 120vh 15vh;
     overflow-x: hidden;
+    width: 100vw;
+    max-width: 100vw;
 }
 
 .sidebar{
