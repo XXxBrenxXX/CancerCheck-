@@ -11,6 +11,7 @@ const the_question = document.getElementById("question");
 const left_arrow = document.getElementsByClassName("left-arrow")[0];
 const right_arrow = document.getElementsByClassName("right-arrow")[0];
 const boxes = document.querySelectorAll(".check");
+const send_button = document.getElementsByClassName("button")[0];
 
 let porcentagem = 0;
 let question = 1;
@@ -54,6 +55,21 @@ function informacao(question) {
     fourth.textContent = answers[question - 1][3][0]; // Quarta resposta
 }
 
+function percentage(){
+    let totalPercentage = 0;
+
+    for (let i = 0; i < 10; i++) {
+        let answer = client_answers[i];
+        if (answer !== -1) { // Certifique-se de que há uma resposta válida
+            let value = answers[i][answer][1]; // Corrigido para pegar o valor correto
+            totalPercentage += value; // Acumula o valor
+        }
+    }
+
+    return totalPercentage;
+}
+
+
 // Chama a função quando o DOM está carregado
 document.addEventListener("DOMContentLoaded", function() {
     informacao(question);
@@ -64,6 +80,14 @@ left_arrow.addEventListener("click", function() {
     if (question === 1) {
         return; // Não faz nada se já estiver na primeira pergunta
     } else {
+        if (question === 10){
+            const hidden_elements = document.getElementsByClassName("visible");
+
+            Array.from(hidden_elements).forEach(element => {
+                element.classList.add("hidden");
+                element.classList.remove("visible")
+            });
+        }
         question--;
         informacao(question);
     }
@@ -78,6 +102,15 @@ right_arrow.addEventListener("click", function() {
     } else {
         question++;
         informacao(question);
+
+        if(question === 10){
+            const hidden_elements = document.getElementsByClassName("hidden");
+
+            Array.from(hidden_elements).forEach(element => {
+                element.classList.remove("hidden");
+                element.classList.add("visible")
+            });
+        }
     }
 
     updateBoxes(); // Chama a função para atualizar as boxes
@@ -101,22 +134,56 @@ boxes.forEach((box, index) => {
 
             answered_questions[question - 1] = true;
             client_answers[question - 1] = index; // Salva o índice da caixa clicada
-        }
-        else if(answered_questions[question - 1] === true && client_answers[question - 1] === index){
+        } 
+        else if (answered_questions[question - 1] === true && client_answers[question - 1] === index) {
+            // Se o box clicado já foi selecionado
             box.classList.remove("show");
-
             answered_questions[question - 1] = false;
-
-            client_answers[question - 1] = 0
-        }
-        else{
-            boxes.forEach(box, index => {
-                if (client_answers[question - 1] === index){
-                    box.classList.remove("show")
+            client_answers[question - 1] = -1; // Use -1 para indicar que não há resposta
+        } 
+        else {
+            // Para todas as caixas, remova a classe se a resposta for a mesma
+            boxes.forEach((otherBox, otherIndex) => {
+                if (client_answers[question - 1] === otherIndex) {
+                    otherBox.classList.remove("show");
                 }
-            })
-
-            box.classList.add("show")
+            });
+            // Adiciona a classe ao novo box clicado
+            box.classList.add("show");
+            // Atualiza a resposta
+            client_answers[question - 1] = index;
         }
     });
 });
+
+send_button.addEventListener("click", () => {
+    if (question === 10) {
+        if (answered_questions.every(element => element === true)) {
+            document.querySelector(".content").classList.add("none");
+            document.querySelector(".results").classList.remove("none");
+
+            const number = percentage();
+
+            const result_h1 = document.getElementsByClassName("percentage")[0];
+            const span_percentage = document.getElementById("percentage");
+            const span_text = document.getElementById("phrase");
+
+            // Resultados
+            if (number > 79) {
+                result_h1.textContent = "Seu risco está extremamente elevado. É crucial realizar mudanças em seus hábitos.";
+            } else if (number >= -200 && number <= 20) {
+                result_h1.textContent = "Parabéns! Seu risco é baixo, mas lembre-se de continuar adotando hábitos saudáveis.";
+            } else if (number > 21 && number < 41) {
+                span_percentage.textContent = number;
+                span_text.textContent = "Você está no caminho certo, mas algumas mudanças podem fazer a diferença. Continue com bons hábitos!";
+            } else if (number > 40 && number < 61) {
+                span_percentage.textContent = number;
+                span_text.textContent = "Atenção! Esse resultado indica que vale a pena revisar seu estilo de vida e adotar hábitos mais saudáveis.";
+            } else {
+                span_percentage.textContent = number;
+                span_text.textContent = "Seu risco é alto. Busque informações e faça ajustes no seu estilo de vida para diminuir essa porcentagem.";
+            }
+        }
+    }
+});
+

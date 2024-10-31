@@ -29,6 +29,8 @@ header img{
     width: 100%;
     max-height: 100%;
     border-top: #c6ac8f solid 5px;
+    z-index: 1;
+    position: absolute;
 }
 
 .hereo{
@@ -42,34 +44,27 @@ header img{
     width: 100%;
     object-fit: cover;
     object-position: 50% 85%;
-    z-index: 1;
 }
 
 .transparency {
-    position: absolute;
-    top: 15vh;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 103.70%;
+    height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.3); /* Transparência por cima da imagem */
     z-index: 2;
+    position: absolute;
+    bottom: 0;
 }
 
 body{
     display: grid;
     grid-template-rows: 15vh 100vh 120vh 15vh;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .texts{
     font-family: "Roboto", sans-serif;
-    position: absolute;
-    top: 15vh;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     grid-row: 2 / 3;
     width: 100%;
     height: 100%;
@@ -118,7 +113,7 @@ body{
     justify-content: flex-start;
 }
 
-.button:hover{
+.touch:hover{
     cursor: pointer;
     background-color: #d4c4b8;
     transform: scale(1.1);
@@ -264,28 +259,93 @@ footer{
     justify-content: center;
     align-items: center;
 }
+@media (max-width: 1200px){
+    body{
+        grid-template-rows: 40vh 100vh 120vh 15vh;
+    }
 
-@media (max-width: 750px){
     header{
-        justify-content: flex-start;
+        flex-direction: column;
     }
 
     header p{
-        font-size: 2.7vw;
-        margin-left: 20px;
+        font-size: 3.6vw;
     }
+}
 
-    .image img{
-        object-position: 75% 85%;
+@media (max-width: 850px){
+    body{
+        grid-template-rows: 40vh 100vh 200vh 15vh;
     }
-
-    footer{
-        font-size: 2.3vw;
-    }
-
+    
     .button{
         height: 20vw;
         width: 80vw;
+    }
+
+    .image img{
+        object-position: 10% 85%;
+    }
+
+    #h1, #h2{
+        display: flex;
+        justify-content: center;
+        max-width: 90%;
+        width: 90%;
+    }
+
+    #quiz{
+        width: 90%;
+        max-width: 90%;
+        justify-content: center;
+    }
+
+    #quiz a{
+        width: 90%;
+        height: 20%;
+    }
+
+    #quiz div{
+        height: 100%;
+        width: 100%;
+    }
+
+    .texts{
+        grid-template-rows: 0.8fr 0.8fr 8.4fr;
+    }
+
+    .content{
+        grid-template-rows: 1fr 9fr 0.5fr 0.5fr 9fr 1fr;
+        grid-template-columns: 1fr 9fr 1fr;
+    }
+
+    .text1{
+        grid-row: 2 / 3;
+        grid-template-columns: 2 / 3;
+    }
+
+    .text2{
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+    }
+
+    .text1 h3, .text2 h3{
+        font-size: 2.5vw;
+    }
+
+    .imagessss img{
+        height: 175%;
+        width: 175%;
+    }
+
+    .tips li{
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 750px){
+    footer{
+        font-size: 2.3vw;
     }
 }
 @media (max-width: 450px){

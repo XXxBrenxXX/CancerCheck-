@@ -19,13 +19,13 @@
 
     <div class="content">
         <div class="arrows">
-            <div class="left-arrow">
+            <div class="touch left-arrow">
                 <img src="images/arrow_back_24dp_EAE0D5_FILL0_wght400_GRAD0_opsz24.svg" alt="Seta para esquerda">
             </div>
             <div class="question">
                 <p id="question">1/12</p>
             </div>
-            <div class="right-arrow">
+            <div class="touch right-arrow">
                 <img src="images/arrow_forward_24dp_EAE0D5_FILL0_wght400_GRAD0_opsz24.svg" alt="Seta para direita">
             </div>
         </div>
@@ -35,16 +35,30 @@
         </div>
 
         <div class="answer">
-            <div class="check"><img src="images/done_outline_24dp_EAE0D5_FILL0_wght400_GRAD0_opsz24.svg" alt="Certo"><p id="first">1</p></div>
-            <div class="check"><img src="images/done_outline_24dp_EAE0D5_FILL0_wght400_GRAD0_opsz24.svg" alt="Certo"><p id="second">2</p></div>
-            <div class="check"><img src="images/done_outline_24dp_EAE0D5_FILL0_wght400_GRAD0_opsz24.svg" alt="Certo"><p id="third">3</p></div>
-            <div class="check"><img src="images/done_outline_24dp_EAE0D5_FILL0_wght400_GRAD0_opsz24.svg" alt="Certo"><p id="fourth">4</p></div>
+            <div class="touch check"><img src="images/done_outline_24dp_EAE0D5_FILL0_wght400_GRAD0_opsz24.svg" alt="Certo"><p id="first">1</p></div>
+            <div class="touch check"><img src="images/done_outline_24dp_EAE0D5_FILL0_wght400_GRAD0_opsz24.svg" alt="Certo"><p id="second">2</p></div>
+            <div class="touch check"><img src="images/done_outline_24dp_EAE0D5_FILL0_wght400_GRAD0_opsz24.svg" alt="Certo"><p id="third">3</p></div>
+            <div class="touch check"><img src="images/done_outline_24dp_EAE0D5_FILL0_wght400_GRAD0_opsz24.svg" alt="Certo"><p id="fourth">4</p></div>
+        </div>
+
+        <div class="send-button hidden">
+            <div class="button hidden">
+                <p class="hidden">Enviar</p>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>Desenvolvido por Breno Gaebler, Vitória Altenrath, Henrique Nielsen e Andrey Snheszak © <span id="year"></span></p>
+        <p> Desenvolvido pelos alunos do 7º Ano A, Colégio São José - Porto União © <span id="year"></span></p>
     </footer>
+
+    <div class="results none">
+        <div id="h1"><h1 class="percentage">Você tem <span id="percentage"></span>% de chance de desenvolver câncer. <span id="phrase"></span></h1></div>
+        <div class="options">
+            <div class="retry"><a href="quiz.html"><img src="images/undo_24dp_342D23_FILL0_wght400_GRAD0_opsz24.svg" alt="Refazer"><p>Refazer</p></a></div>
+            <div class="home"><a href="index.html"><img src="images/home_24dp_342D23_FILL0_wght400_GRAD0_opsz24.svg" alt="Casa"><p>Página inicial</p></a></div>
+        </div>
+    </div>
     <script src="js/quiz.js"></script>
 </body>
 </html>
