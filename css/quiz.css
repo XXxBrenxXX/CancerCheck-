@@ -239,10 +239,11 @@ footer{
     background-color: #342d23;
     color: #eae0d5;
     font-family: "Roboto", sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .check img{
@@ -308,7 +309,7 @@ footer{
 
     .answer div{
         width: 75%;
-        height: 90%;
+        height: 80%;
         text-align: center;
     }
 
@@ -321,6 +322,27 @@ footer{
     }
 
     header p{
-        font-size: 18px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .content{
+        grid-template-rows: 1fr 2fr 4fr 3fr;
+    }
+}
+
+@media (max-width: 525px){
+    header p{
+        font-size: 4.6vw;
+    }
+
+    footer p{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 870px){
+    footer p{
+        font-size: 2.7vw;
     }
 }

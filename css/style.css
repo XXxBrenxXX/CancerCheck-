@@ -79,11 +79,13 @@ body{
 #h1{
     font-size: 25px;
     grid-row: 1 / 2;
+    color: #222;
 }
 
 #h2{
     grid-row: 2 / 3;
     font-size: 15px;
+    color: #222;
 }
 
 .texts div{
