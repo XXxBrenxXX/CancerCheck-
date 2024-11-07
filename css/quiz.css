@@ -146,6 +146,11 @@ header img{
     gap: 10vw;
 }
 
+.answer div{
+    height: 45% !important;
+    min-height: 45%;
+}
+
 .retry, .home{
     font-family: "Roboto", sans-serif;
     width: 20%;
@@ -188,6 +193,7 @@ a{
 
 #advice-text p{
     color: #780000;
+    text-align: center;
 }
 
 .send-button .button{
@@ -309,12 +315,19 @@ footer{
 
     .answer div{
         width: 75%;
-        height: 80%;
+        height: 80% !important;
         text-align: center;
     }
 
     .send-button .button{
-        width: 30vw;
+        width: 30%;
+        height: 40%;
+    }
+
+    .send-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     header img{
@@ -337,11 +350,15 @@ footer{
     }
 
     footer p{
-        font-size: 10px;
+        font-size: 3.4vw;
+    }
+
+    body{
+        grid-template-rows: 15vh 75vh 15vh;
     }
 }
 
-@media (max-width: 870px){
+@media (max-width: 870px) and (min-width: 526px){
     footer p{
         font-size: 2.7vw;
     }
