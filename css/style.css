@@ -225,6 +225,16 @@ ul{
     height: 3vw;
 }
 
+* {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    margin: 0; 
+    padding: 0;
+  }
+
 .imagessss{
     grid-column: 5 / 6;
     grid-row: 2 / 3;
@@ -316,7 +326,7 @@ footer{
 
     .text1{
         grid-row: 2 / 3;
-        grid-template-columns: 2 / 3;
+        grid-column: 2 / 3;
     }
 
     .text2{
@@ -335,6 +345,10 @@ footer{
 
     .tips li{
         font-size: 3vw;
+    }
+
+    .tips ul{
+        padding-left: 10px;
     }
 }
 
@@ -356,6 +370,16 @@ footer{
 
     footer p{
         font-size: 3.4vw;
+    }
+}
+
+@media (max-width: 425px){
+    .tips li{
+        font-size: 4vw;
+    }
+
+    .title h3{
+        font-size: 5vw;
     }
 }
 
