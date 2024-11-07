@@ -320,14 +320,8 @@ footer{
     }
 
     .send-button .button{
-        width: 30%;
-        height: 40%;
-    }
-
-    .send-button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 50%;
+        height: 30%;
     }
 
     header img{

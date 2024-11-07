@@ -260,24 +260,12 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-@media (max-width: 1200px){
-    body{
-        grid-template-rows: 40vh 100vh 120vh 15vh;
-    }
-
-    header{
-        flex-direction: column;
-    }
-
-    header p{
-        font-size: 3.6vw;
-    }
+    text-align: center;
 }
 
 @media (max-width: 850px){
     body{
-        grid-template-rows: 40vh 100vh 200vh 15vh;
+        grid-template-rows: 15vh 100vh 200vh 15vh;
     }
     
     .button{
@@ -294,6 +282,7 @@ footer{
         justify-content: center;
         max-width: 90%;
         width: 90%;
+        text-align: center;
     }
 
     #quiz{
@@ -345,26 +334,35 @@ footer{
     }
 }
 
-@media (max-width: 750px){
-    footer{
-        font-size: 2.3vw;
-    }
-}
 @media (max-width: 450px){
-    header{
-        justify-content: flex-start;
-    }
-
-    header p{
-        font-size: 3vw;
-        margin-left: 20px;
-    }
-
     .image img{
         object-position: 75% 85%;
     }
+}
 
+@media (max-width: 900px){
     header img{
-        height: 10vh;
+        display: none;
+    }
+
+    header p{
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 525px){
+    header p{
+        font-size: 4.6vw;
+    }
+
+    footer p{
+        font-size: 3.4vw;
+    }
+}
+
+@media (max-width: 870px) and (min-width: 526px){
+    footer p{
+        font-size: 2.7vw;
     }
 }
