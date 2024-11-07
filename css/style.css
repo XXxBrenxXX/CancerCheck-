@@ -60,20 +60,22 @@ body{
     grid-template-rows: 15vh 100vh 120vh 15vh;
     margin: 0;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 .texts{
     font-family: "Roboto", sans-serif;
     position: relative;
     grid-row: 2 / 3;
-    width: 100%;
+    width: 100% - 50px;
     height: 100%;
     max-height: 100%;
     color: #0a0908;
     display: grid;
     grid-template-rows: 2fr 1fr 6fr;
     z-index: 3;
-    margin-left: 3vw;
+    padding-left: 50px;
 }
 
 #h1{
@@ -280,19 +282,19 @@ footer{
     #h1, #h2{
         display: flex;
         justify-content: center;
-        max-width: 90%;
-        width: 90%;
+        max-width: 100%;
+        width: 100%;
         text-align: center;
     }
 
     #quiz{
-        width: 90%;
-        max-width: 90%;
+        width: 100%;
+        max-width: 100%;
         justify-content: center;
     }
 
     #quiz a{
-        width: 90%;
+        width: 75%;
         height: 20%;
     }
 
@@ -303,6 +305,8 @@ footer{
 
     .texts{
         grid-template-rows: 0.8fr 0.8fr 8.4fr;
+        padding-left: 0;
+        width: 100%;
     }
 
     .content{
@@ -331,12 +335,6 @@ footer{
 
     .tips li{
         font-size: 3vw;
-    }
-}
-
-@media (max-width: 450px){
-    .image img{
-        object-position: 75% 85%;
     }
 }
 
