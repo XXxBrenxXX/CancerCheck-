@@ -15,6 +15,10 @@ header{
     grid-row: 1 / 2;
 }
 
+.answer p{
+    text-align: center;
+}
+
 header p{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
