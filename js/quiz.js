@@ -156,6 +156,10 @@ boxes.forEach((box, index) => {
                         element.classList.add("visible");
                     });
                 }
+
+                if(answered_questions[question - 1] === true){
+                    box.classList.add("show");
+                }
             } else {
                 box.classList.add("show");
             }
