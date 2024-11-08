@@ -28,6 +28,7 @@ header img{
     height: 100%;
     width: 100%;
     max-height: 100%;
+    min-height: 100%;
     border-top: #c6ac8f solid 5px;
     z-index: 1;
     position: absolute;
@@ -37,6 +38,7 @@ header img{
     grid-row: 2 / 3;
     height: 100%;
     width: 100%;
+    min-height: 100%;
 }
 
 .image img{
@@ -53,6 +55,7 @@ header img{
     z-index: 2;
     position: absolute;
     bottom: 0;
+    min-height: 100%;
 }
 
 body{
@@ -76,6 +79,7 @@ body{
     grid-template-rows: 2fr 1fr 6fr;
     z-index: 3;
     padding-left: 50px;
+    min-height: 100%;
 }
 
 #h1{
@@ -225,15 +229,11 @@ ul{
     height: 3vw;
 }
 
-* {
-    box-sizing: border-box !important;
-  }
-
-  html, body {
+html, body {
     overflow-x: hidden;
     margin: 0; 
     padding: 0;
-  }
+}
 
 .imagessss{
     grid-column: 5 / 6;
