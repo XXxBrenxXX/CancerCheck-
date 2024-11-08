@@ -30,7 +30,6 @@ header img{
     max-height: 100%;
     min-height: 100%;
     border-top: #c6ac8f solid 5px;
-    z-index: 1;
     position: absolute;
 }
 
@@ -52,14 +51,9 @@ header img{
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.3); /* Transparência por cima da imagem */
-    z-index: 2;
     position: absolute;
     bottom: 0;
     min-height: 100%;
-}
-
-*{
-    border: 0 !important; 
 }
 
 body{
@@ -81,7 +75,6 @@ body{
     color: #0a0908;
     display: grid;
     grid-template-rows: 2fr 1fr 6fr;
-    z-index: 3;
     padding-left: 50px;
     min-height: 100%;
 }
