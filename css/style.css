@@ -276,6 +276,11 @@ footer{
     text-align: center;
 }
 
+.bug{
+    position: relative !important;
+    bottom: 25vh !important; 
+}
+
 @media (max-width: 850px){
     body{
         grid-template-rows: 15vh 100vh 200vh 15vh;
