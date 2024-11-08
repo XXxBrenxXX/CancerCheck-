@@ -27,7 +27,6 @@ header img{
 .image{
     height: 100%;
     width: 100%;
-    max-height: 100%;
     min-height: 100%;
     border-top: #c6ac8f solid 5px;
     position: absolute;
@@ -71,7 +70,6 @@ body{
     grid-row: 2 / 3;
     width: 100% - 50px;
     height: 100%;
-    max-height: 100%;
     color: #0a0908;
     display: grid;
     grid-template-rows: 2fr 1fr 6fr;
@@ -276,9 +274,8 @@ footer{
     text-align: center;
 }
 
-.bug{
-    position: relative !important;
-    bottom: 25vh !important; 
+.resize{
+    grid-template-rows: 15vh 75vh 120vh 15vh;
 }
 
 @media (max-width: 850px){

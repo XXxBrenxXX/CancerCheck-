@@ -5,14 +5,24 @@ const year = document.getElementById("year");
 const current_year = new Date().getFullYear();
 year.textContent = current_year;
 
-user_screen_width = window.innerWidth;
-user_screen_height = window.innerHeight;
+let user_screen_width = window.innerWidth;
+let user_screen_height = window.innerHeight;
 
-if (user_screen_width < user_screen_height0){
-    const footer = document.querySelector("footer");
-    const content = document.getElementsByClassName("content")[0];
+bug(); // Chama a função inicialmente para aplicar a lógica de uma vez
 
-    footer.classList.add("bug");
-    content.classList.add("bug");
+function bug() {
+    // Condição para verificar se a largura da tela é menor que a altura
+    if (user_screen_width < user_screen_height) {
+        const body = document.querySelector("body");
+
+        body.classList.add("resize");
+    }
 }
 
+// Evento para verificar o redimensionamento da janela
+window.addEventListener('resize', function() {
+    user_screen_width = window.innerWidth;
+    user_screen_height = window.innerHeight;
+
+    bug(); // Chama a função novamente após o redimensionamento
+});
