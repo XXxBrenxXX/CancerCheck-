@@ -30,7 +30,6 @@ header img{
     max-height: 100%;
     min-height: 100%;
     border-top: #c6ac8f solid 5px;
-    position: absolute;
 }
 
 .hereo{
@@ -52,6 +51,7 @@ header img{
     width: 100%;
     background: rgba(0, 0, 0, 0.3); /* Transparência por cima da imagem */
     position: absolute;
+    top: 15vh;
     bottom: 0;
     min-height: 100%;
 }

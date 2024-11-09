@@ -16,19 +16,43 @@ const boxes = document.querySelectorAll(".check");
 const send_button = document.getElementsByClassName("button")[0];
 const advice_text = document.getElementById("advice-text");
 
+///////////////
+
+if (window.innerWidth < window.innerHeight) {
+    const touch = document.getElementsByClassName("touch");
+
+    // Converte a HTMLCollection em um array para usar forEach
+    Array.from(touch).forEach(element => {
+        element.classList.remove("touch");
+    });
+}
+
 // Questions
 let questions = [
     "Com que frequência você fuma?", 
     "Com que frequência você consome álcool?", 
     "Com que frequência você pratica atividade física?", 
     "Com que frequência você consome frutas e vegetais?",
-    "Com que frequência você consome alimentos altamente industrializados?",
+    "Com que frequência você consome alimentos ultraprocessados?",
     "Quanto você se expõe ao sol sem proteção?", 
-    "Quantas vezes por ano você realiza exames de rotina?",     
+    "Quantas vezes por ano você realiza exames médicos, como o de sangue?",     
     "Qual é o seu nível de estresse diário?",
     "Quantas pessoas da sua família próxima (pais, irmãos) tiveram câncer?", 
     "Quantas horas de sono você tem por noite?",
     "Qual é a sua idade?"
+];
+
+let increments = [
+    "O hábito de fumar é prejudicial à saúde.", 
+    "O consumo excessivo de álcool pode afetar sua saúde negativamente.", 
+    "A prática regular de atividades físicas é fundamental para a saúde.", 
+    "Incluir frutas e vegetais na dieta regularmente é ideal para o bem-estar.", 
+    "Consumir alimentos ultraprocessados com frequência não é saudável.", 
+    "Usar protetor solar ao se expor ao sol é essencial para a proteção da pele.", 
+    "Realizar exames médicos regularmente é importante para a detecção precoce de doenças, como o câncer.", 
+    "Manter uma rotina organizada pode ajudar a reduzir o nível de estresse diário.", 
+    "Ter uma rotina equilibrada contribui para uma boa qualidade de sono.", 
+    "Monitorar a saúde é importante, especialmente se há histórico de câncer na família."
 ];
 
 // Possible answers and percentage value
