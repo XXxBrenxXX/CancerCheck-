@@ -49,7 +49,7 @@ header img{
 .transparency {
     height: 100vh;
     width: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Transparência por cima da imagem */
+    background: rgba(0, 0, 0, 0.2); /* Transparência por cima da imagem */
     position: absolute;
     top: 15vh;
     bottom: 0;
@@ -72,7 +72,6 @@ body{
     width: 100% - 50px;
     height: 100%;
     max-height: 100%;
-    color: #0a0908;
     display: grid;
     grid-template-rows: 2fr 1fr 6fr;
     padding-left: 50px;
@@ -82,13 +81,13 @@ body{
 #h1{
     font-size: 25px;
     grid-row: 1 / 2;
-    color: #222;
+    color: #342d23;
 }
 
 #h2{
     grid-row: 2 / 3;
     font-size: 15px;
-    color: #222;
+    color: #342d23;
 }
 
 .texts div{
@@ -287,7 +286,7 @@ footer{
     }
 
     .image img{
-        object-position: 10% 85%;
+        object-position: 50% 0%;
     }
 
     #h1, #h2{

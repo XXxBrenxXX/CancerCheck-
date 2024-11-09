@@ -42,19 +42,6 @@ let questions = [
     "Qual é a sua idade?"
 ];
 
-let increments = [
-    "O hábito de fumar é prejudicial à saúde.", 
-    "O consumo excessivo de álcool pode afetar sua saúde negativamente.", 
-    "A prática regular de atividades físicas é fundamental para a saúde.", 
-    "Incluir frutas e vegetais na dieta regularmente é ideal para o bem-estar.", 
-    "Consumir alimentos ultraprocessados com frequência não é saudável.", 
-    "Usar protetor solar ao se expor ao sol é essencial para a proteção da pele.", 
-    "Realizar exames médicos regularmente é importante para a detecção precoce de doenças, como o câncer.", 
-    "Manter uma rotina organizada pode ajudar a reduzir o nível de estresse diário.", 
-    "Ter uma rotina equilibrada contribui para uma boa qualidade de sono.", 
-    "Monitorar a saúde é importante, especialmente se há histórico de câncer na família."
-];
-
 // Possible answers and percentage value
 let answers = [
     [["Nunca", -10], ["Raramente", 5], ["Regularmente", 15], ["Diariamente", 25]],
