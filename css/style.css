@@ -47,7 +47,7 @@ header img{
 }
 
 .transparency {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background: rgba(0, 0, 0, 0.3); /* Transparência por cima da imagem */
     position: absolute;
